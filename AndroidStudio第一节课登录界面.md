@@ -2,21 +2,27 @@
 
 [TOC]
 
+
+
 ## 1安装启动AndroidStudio
 
 ## 2登录界面
 
 ### 2.1 新建LoginActivity
 
-![](E:\Desktop\TIM截图20200220165904.jpg)
+![img](https://mmbiz.qpic.cn/mmbiz_jpg/vkC2hqLZ6XFq7vQUPQVactWrWHCS3GMouukLkibvJ7ehPDI5cO3l8DasDHCRtEyPKdp2DJibEpqBbw3M3TDZ9Ejg/640?wx_fmt=jpeg)
 
 layout对应会出现activity_login_activtiy.xml
+
+![img](https://mmbiz.qpic.cn/mmbiz_jpg/vkC2hqLZ6XFq7vQUPQVactWrWHCS3GModL0kgcpCOf458hVicoklDKcQBYw9fTInLWoJzOATx9Avib82yZibzX4Ew/640?wx_fmt=jpeg)
+
+
 
 ### 2.2 创建界面
 
 创建后，打开layout对应的xml修改为RelativeLayout
 
-![](E:\Desktop\TIM截图20200220170142.jpg)
+![img](https://mmbiz.qpic.cn/mmbiz_jpg/vkC2hqLZ6XFq7vQUPQVactWrWHCS3GMoAMzibUKvPUEk0lzAAVIyfiaA5g6pV4dHWnSe6FqU8jj6J5mbL3t0o1fg/640?wx_fmt=jpeg)
 
 打开Design模式，选取框体
 
@@ -24,11 +30,11 @@ layout对应会出现activity_login_activtiy.xml
 
 Button是一种比较常用的控件爱你，最常用的就是其监听事件
 
-![](E:\Desktop\TIM截图20200220182344.jpg)
+
 
 我们也可以在Text模式中进行设计
 
-```
+```java
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -44,9 +50,9 @@ Button是一种比较常用的控件爱你，最常用的就是其监听事件
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="45dp"
-        android:text="登 录 界 面"      //显示的内容
-        android:textSize="25dp"       //字体大小
-        android:textColor="#FF7300"/> //颜色
+        android:text="登 录 界 面"
+        android:textSize="25dp"
+        android:textColor="#FF7300"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -114,29 +120,54 @@ Button是一种比较常用的控件爱你，最常用的就是其监听事件
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="点击我进行注册"
-        android:layout_below="@+id/editText2"
-        android:layout_marginTop="89dp"
-        android:layout_toEndOf="@+id/button" />
+        android:layout_alignBaseline="@+id/textView5"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_toStartOf="@+id/editText2" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView4"
-        android:layout_marginTop="33dp"
         android:text="点击联系我们"
-        android:layout_alignEnd="@+id/textView4"
+        android:layout_above="@+id/button2"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_marginBottom="56dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_below="@+id/editText2"
+        android:layout_marginTop="36dp"
+        android:text="验证码" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView5"
+        android:layout_marginBottom="34dp"
+        android:layout_toEndOf="@+id/textView4"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="请输入验证码" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView7"
+        android:layout_alignEnd="@+id/editText2"
+        android:text="请点击产生验证码"
         android:layout_alignStart="@+id/editText2" />
 </RelativeLayout>
+
 ```
 
-#### **TextView属性**
+#### TextView属性
 
-![](E:\Desktop\v2-1bdbe2eca06e14042251f6d00ee0a98a_hd.png)
-
-
-
-
+![img](https://mmbiz.qpic.cn/mmbiz_png/vkC2hqLZ6XFq7vQUPQVactWrWHCS3GMoqq7TXQ7Xn5ncWWtmPqolb0XuzYU5Xj6fibxCDfrfuicQsO5pXCDh9shQ/640?wx_fmt=png)
 
 TextView标签中“android:”后面的单词表示属性名，“=” 后面用引号包裹的部分表示属性值，通过这种“键 - 值”对的关系设定控件的一个个属性。这里为TextView添加的属性有：
 
@@ -150,7 +181,7 @@ TextView标签中“android:”后面的单词表示属性名，“=” 后面�
 
 
 
-![img](https://pic3.zhimg.com/80/v2-fe042aea71bbb90a173d51267fda6be6_hd.png)
+![img](https://mmbiz.qpic.cn/mmbiz_png/vkC2hqLZ6XFq7vQUPQVactWrWHCS3GMoh9ZEialQOS9AqNmjDicjv5YNibNPLV5KTz6iaQV1bnx09yLzEE3wtr323Q/640?wx_fmt=png)
 
 
 
@@ -166,48 +197,32 @@ TextView标签中“android:”后面的单词表示属性名，“=” 后面�
 
 Ø textStyle属性：这个属性用于设置字体的样式，android提供了三个值供开发者选用：bold（加粗）、italic（斜体）、normal（正常），其中normal为默认值。
 
-#### **全屏显示设置**
+#### 全屏显示设置
 
 **新建style**
 
 打开styles.xml
 
-![](E:\Desktop\TIM截图20200220185937.jpg)
+![img](https://mmbiz.qpic.cn/mmbiz_jpg/vkC2hqLZ6XFq7vQUPQVactWrWHCS3GMooUHFR3DuyDJL2jtfcr2HEauFrgDjdckbqjAYiapXibhfRWb4dqmVXM0Q/640?wx_fmt=jpeg)
 
 ```
-<resources>
-
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
-    <style name="AppTheme.FullScreen">
-        <!-- Customize your theme here. -->
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="android:windowFullscreen">true</item>
-    </style>
-
-
-</resources>
+ <resources>     <!-- Base application theme. -->    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">        <!-- Customize your theme here. -->        <item name="colorPrimary">@color/colorPrimary</item>        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>        <item name="colorAccent">@color/colorAccent</item>    </style>    <style name="AppTheme.FullScreen">        <!-- Customize your theme here. -->        <item name="windowActionBar">false</item>        <item name="windowNoTitle">true</item>        <item name="android:windowFullscreen">true</item>    </style>   </resources>
 ```
 
 **使用style**
 
-![](E:\Desktop\TIM截图20200220190813.jpg)
+![img](https://mmbiz.qpic.cn/mmbiz_jpg/vkC2hqLZ6XFq7vQUPQVactWrWHCS3GMo0c7eLwhwp9MTX4Azt6zms9hV6XfCElx8IfDOohnnDgsk7ltjY1GbnQ/640?wx_fmt=jpeg)
 
-### 2.3 对事件的监听
+### 2.3 对事件的监听 
 
 在LoginActivity中编辑
 
-```
-package com.test01;
+```java
+ package com.test01;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.provider.MediaStore;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -217,16 +232,19 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Random;
+
+
 public class LoginActivity extends AppCompatActivity {
-  //全局变量声明
-    EditText username,pwd;  
+    EditText username,pwd,inputCode;
     Button login,exit;
-    TextView register,us;
+    TextView register,us,showCode;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_activtiy);
-//获取事件源
+
         username = (EditText) findViewById(R.id.editText);
         pwd = (EditText) findViewById(R.id.editText2);
         login = (Button)findViewById(R.id.button);
@@ -234,7 +252,6 @@ public class LoginActivity extends AppCompatActivity {
         register = (TextView)findViewById(R.id.textView4);
         us = (TextView)findViewById(R.id.textView5);
 
-//使用匿名内部类实现监听
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -253,22 +270,22 @@ public class LoginActivity extends AppCompatActivity {
         us.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Uri uri = Uri.parse("tel:13000000000");
-                Intent intent = new Intent(Intent.ACTION_DIAL,uri);
-                startActivity(intent);
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(intent, 1);
             }
         });
+        showCode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showCode.setText(yzm());
 
-
-
-    }
-
-
+            }
+        });
 }
 
 ```
 
-#### **监听三要素**
+#### 监听三要素
 
 **1. 事件源（Event Source）**产生事件的来源，通常是各种组件，如按钮，窗口等
 
@@ -276,20 +293,25 @@ public class LoginActivity extends AppCompatActivity {
 
 **3.事件监听器（Event Listener）**：负责监听事件源发生的事件，并对不同的事件做相应的处理
 
-#### **事件监听器**
+#### 事件监听器
 
-在android系统中常见的事件监听器有如下几种：
-a）单击事件（View.OnClickListener):
+在android系统中常见的事件监听器有如下几种：a）单击事件（View.OnClickListener):
 
-    当用户触碰到某个组件或者方向键被按下时产生该事件，该事件的处理方法是onClick();
+```
+ 当用户触碰到某个组件或者方向键被按下时产生该事件，该事件的处理方法是onClick();
+```
 
 b）焦点事件（View.OnFocusChangeListener):
 
-     组件得到或者失去焦点时产生该事件，事件处理方法是onFocusChange()。
+```
+  组件得到或者失去焦点时产生该事件，事件处理方法是onFocusChange()。
+```
 
 c）按键事件（View.OnKeyListener）：
 
-    用户按下或者释放设备上的某个按键时产生，事件处理方法是onKey();
+```
+ 用户按下或者释放设备上的某个按键时产生，事件处理方法是onKey();
+```
 
 d）触碰事件（View.OnTouchListener）：
 
@@ -299,7 +321,7 @@ e）创建上下文菜单事件（View.OnCreateContextMenuListener）：
 
 创建上下文菜单时产生该事件，事件处理方法是onCreateContextMenu().
 
-#### **事件处理步骤**
+#### 事件处理步骤
 
 a)创建事件监听器。
 
@@ -307,115 +329,94 @@ b)给要响应事件的组件注册事件监听器。
 
 c)在事件处理方法中编写实现代码。
 
-![](E:\Desktop\TIM截图20200220193648.jpg)
 
 
+![img](https://mmbiz.qpic.cn/mmbiz_jpg/vkC2hqLZ6XFq7vQUPQVactWrWHCS3GMoFlXag5lyZjzjHpvOJ7nfR80VL34aQAzhwUHLJFtqjEBN5WibaKadNIQ/640?wx_fmt=jpeg)
 
 ## Intent
 
 https://www.jianshu.com/p/67d99a82509b
 
-作者：翻译不了的声响
-链接：https://www.jianshu.com/p/67d99a82509b
-来源：简书
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处
+作者：翻译不了的声响链接：https://www.jianshu.com/p/67d99a82509b来源：简书著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处
 
 **简介**
 
 Android中提供了Intent机制来协助应用间的交互与通讯，Intent负责对应用中一次操作的动作、动作涉及数据、附加数据进行描述，Android则根据此Intent的描述，负责找到对应的组件，将 Intent传递给调用的组件，并完成组件的调用。Intent不仅可用于应用程序之间，也可用于应用程序内部的 **Activity / Service**之间的交互。因此，Intent在这里起着一个媒体中介的作用，专门提供组件互相调用的相关信息，实现调用者与被调用者之间的解耦。
 
-### **1. Intent作用**
+### 1. Intent作用
 
 Intent是一个将要执行的动作的抽象的描述，一般来说是作为参数来使用，由 Intent来协助完成 Android各个组件之间的通讯。比如说调用`startActivity()`来启动一个Activity，或者由`broadcaseIntent()`来传递给所有感兴趣的`BroadcaseReceiver`，再或者由`startService() / bindservice()`来启动一个后台的 service。所以可以看出来，Intent 主要是用来启动其他的 activity 或者 service，所以可以将 intent 理解成 activity 之间的粘合剂。
 
 Intent作用的表现形式为：
 
-- **启动Activity**
-   通过`Context.startActvity() / Activity.startActivityForResult()`启动一个Activity；
-- **启动Service**
-   通过`Context.startService()`启动一个服务，或者通过`Context.bindService()`和后台服务交互；
-- **发送Broadcast**
-   通过广播方法`Context.sendBroadcasts() / Context.sendOrderedBroadcast() / Context.sendStickyBroadcast()`发给`Broadcast Receivers`
+- **启动Activity**通过`Context.startActvity() / Activity.startActivityForResult()`启动一个Activity；
+- **启动Service**通过`Context.startService()`启动一个服务，或者通过`Context.bindService()`和后台服务交互；
+- **发送Broadcast**通过广播方法`Context.sendBroadcasts() / Context.sendOrderedBroadcast() / Context.sendStickyBroadcast()`发给`Broadcast Receivers`
 
-### **2. Intent种类**
+### 2. Intent种类
 
-- **显式Intent**
-   显式，即直接指定需要打开的activity对应的类。
+- **显式Intent**显式，即直接指定需要打开的activity对应的类。
 
 1）构造方法传入Component，最常用的方式：
 
-
-
-```java
-Intent intent = new Intent(this, SecondActivity.class);  
-startActivity(intent);  
+```
+ Intent intent = new Intent(this, SecondActivity.class);   startActivity(intent);  
 ```
 
 2）setComponent方法
 
-
-
 ```java
-Intent intent = new Intent();    
-intent.setClass(this, SecondActivity.class);  
-//或者intent.setClassName(this, "com.example.app.SecondActivity");  
-//或者intent.setClassName(this.getPackageName(),"com.example.app.SecondActivity");            
-startActivity(intent);  
+ Intent intent = new Intent();     
+ intent.setClass(this, SecondActivity.class);   
+ //或者intent.setClassName(this, "com.example.app.SecondActivity");   
+ //或者intent.setClassName(this.getPackageName(),"com.example.app.SecondActivity");             
+ startActivity(intent);  
 ```
 
 3）setClass / setClassName方法
 
-
-
 ```java
-Intent intent = new Intent();    
-intent.setClass(this, SecondActivity.class);  
-//或者intent.setClassName(this, "com.example.app.SecondActivity");  
-//或者intent.setClassName(this.getPackageName(),"com.example.app.SecondActivity");            
-startActivity(intent);  
+Intent intent = new Intent();
+intent.setClass(this, SecondActivity.class);
+//或者intent.setClassName(this, "com.example.app.SecondActivity");
+//或者intent.setClassName(this.getPackageName(),"com.example.app.SecondActivity");
+startActivity(intent);
 ```
 
 显式Intent通过Component可以直接设置需要调用的Activity类，可以唯一确定一个Activity，意图特别明确，所以是显式的。设置这个类的方式可以是Class对象（如`SecondActivity.class`），也可以是包名加类名的字符串（如`"com.example.app.SecondActivity"`）。
 
-- **隐式Intent**
-   隐式，不明确指定启动哪个Activity，而是设置Action、Data、Category，让系统来筛选出合适的Activity。筛选是根据所有的``来筛选。
+- **隐式Intent**隐式，不明确指定启动哪个Activity，而是设置Action、Data、Category，让系统来筛选出合适的Activity。筛选是根据所有的``来筛选。
 
-### **3属性**
+### 3属性
 
 Intent对象大致包括7大属性：**Action（动作）**、**Data（数据）**、**Category（类别）**、**Type（数据类型）**、**Component（组件）**、**Extra（扩展信息）**、**Flag（标志位）**。其中最常用的是Action属性和Data属性。
 
-### **4用法**
+### 4用法
 
 - 调用拨号程序
 
-```dart
+```java
 // 调用拨打电话，给10010拨打电话
 Uri uri = Uri.parse("tel:10010");
 Intent intent = new Intent(Intent.ACTION_DIAL, uri);
 startActivity(intent);
-```
-
-```dart
-// 直接拨打电话，需要加上权限 <uses-permission id="android.permission.CALL_PHONE" /> 
-Uri callUri = Uri.parse("tel:10010"); 
-Intent intent = new Intent(Intent.ACTION_CALL, callUri); 
+// 直接拨打电话，需要加上权限 
+<uses-permission id="android.permission.CALL_PHONE" />
+Uri callUri = Uri.parse("tel:10010");
+Intent intent = new Intent(Intent.ACTION_CALL, callUri);
 ```
 
 - 发送短信或彩信
 
-```dart
+```java
  // 给10010发送内容为“Hello”的短信
-Uri uri = Uri.parse("smsto:10010");
-Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
-intent.putExtra("sms_body", "Hello");
-startActivity(intent);
-```
-
-```dart
+ Uri uri = Uri.parse("smsto:10010");
+ Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
+ intent.putExtra("sms_body", "Hello");startActivity(intent);
 // 发送彩信（相当于发送带附件的短信）
 Intent intent = new Intent(Intent.ACTION_SEND);
 intent.putExtra("sms_body", "Hello");
-Uri uri = Uri.parse("content://media/external/images/media/23");
+Uri uri =Uri.parse("content://media/external/images/media/23");
 intent.putExtra(Intent.EXTRA_STREAM, uri);
 intent.setType("image/png");
 startActivity(intent);
@@ -423,7 +424,7 @@ startActivity(intent);
 
 - 通过浏览器打开网页
 
-```dart
+```java
 // 打开百度主页
 Uri uri = Uri.parse("https://www.baidu.com");
 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
@@ -432,48 +433,39 @@ startActivity(intent);
 
 - 发送电子邮件
 
-```dart
+```java
 // 给someone@domain.com发邮件
 Uri uri = Uri.parse("mailto:someone@domain.com");
 Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
 startActivity(intent);
-```
-
-```cpp
 // 给someone@domain.com发邮件发送内容为“Hello”的邮件
 Intent intent = new Intent(Intent.ACTION_SEND);
 intent.putExtra(Intent.EXTRA_EMAIL, "someone@domain.com");
 intent.putExtra(Intent.EXTRA_SUBJECT, "Subject");
 intent.putExtra(Intent.EXTRA_TEXT, "Hello");
-intent.setType("text/plain");
-startActivity(intent);
-```
-
-```dart
+intent.setType("text/plain");startActivity(intent);
 // 给多人发邮件
 Intent intent=new Intent(Intent.ACTION_SEND);
-String[] tos = {"1@abc.com", "2@abc.com"}; // 收件人
-String[] ccs = {"3@abc.com", "4@abc.com"}; // 抄送
-String[] bccs = {"5@abc.com", "6@abc.com"}; // 密送
+String[] tos = {"1@abc.com", "2@abc.com"}; 
+// 收件人
+String[] ccs = {"3@abc.com", "4@abc.com"}; 
+// 抄送
+String[] bccs = {"5@abc.com", "6@abc.com"}; 
+// 密送
 intent.putExtra(Intent.EXTRA_EMAIL, tos);
 intent.putExtra(Intent.EXTRA_CC, ccs);
 intent.putExtra(Intent.EXTRA_BCC, bccs);
 intent.putExtra(Intent.EXTRA_SUBJECT, "Subject");
 intent.putExtra(Intent.EXTRA_TEXT, "Hello");
-intent.setType("message/rfc822");
-startActivity(intent);
+intent.setType("message/rfc822");startActivity(intent);
 ```
 
 - 显示地图与路径规划
 
-```dart
+```java
  // 打开Google地图中国北京位置（北纬39.9，东经116.3）
-Uri uri = Uri.parse("geo:39.9,116.3");
-Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-startActivity(intent);
-```
-
-```dart
+ Uri uri = Uri.parse("geo:39.9,116.3");
+ Intent intent = new Intent(Intent.ACTION_VIEW, uri);startActivity(intent);
 // 路径规划：从北京某地（北纬39.9，东经116.3）到上海某地（北纬31.2，东经121.4）
 Uri uri = Uri.parse("http://maps.google.com/maps?f=d&saddr=39.9 116.3&daddr=31.2 121.4");
 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
@@ -482,63 +474,59 @@ startActivity(intent);
 
 - 播放多媒体
 
-```dart
+```java
 Intent intent = new Intent(Intent.ACTION_VIEW);
 Uri uri = Uri.parse("file:///sdcard/foo.mp3");
 intent.setDataAndType(uri, "audio/mp3");
-startActivity(intent);
-
-Uri uri = Uri.withAppendedPath(MediaStore.Audio.Media.INTERNAL_CONTENT_URI, "1");
+startActivity(intent);Uri uri = Uri.withAppendedPath(MediaStore.Audio.Media.INTERNAL_CONTENT_URI, "1");
 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
 startActivity(intent);
 ```
 
 - 选择图片
 
-```cpp
+```java
 Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-intent.setType("image/*");
-startActivityForResult(intent, 2);
+intent.setType("image/*");startActivityForResult(intent, 2);
 ```
 
 - 拍照
 
-```cpp
+```java
  // 打开拍照程序
-Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-startActivityForResult(intent, 1);
-```
-
-```csharp
+ Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+ startActivityForResult(intent, 1);
  // 取出照片数据
-Bundle extras = intent.getExtras();
-Bitmap bitmap = (Bitmap) extras.get("data");
+ Bundle extras = intent.getExtras();
+ Bitmap bitmap = (Bitmap) extras.get("data");
 ```
 
 - 获取并剪切图片
 
-```dart
+```java
 // 获取并剪切图片
 Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
 intent.setType("image/*");
-intent.putExtra("crop", "true"); // 开启剪切
-intent.putExtra("aspectX", 1); // 剪切的宽高比为1：2
+intent.putExtra("crop", "true"); 
+// 开启剪切
+intent.putExtra("aspectX", 1); 
+// 剪切的宽高比为1：2
 intent.putExtra("aspectY", 2);
-intent.putExtra("outputX", 20); // 保存图片的宽和高
+intent.putExtra("outputX", 20); 
+// 保存图片的宽和高
 intent.putExtra("outputY", 40);
-intent.putExtra("output", Uri.fromFile(new File("/mnt/sdcard/temp"))); // 保存路径
-intent.putExtra("outputFormat", "JPEG");// 返回格式
-startActivityForResult(intent, 0);
-```
-
-```dart
+intent.putExtra("output", Uri.fromFile(new File("/mnt/sdcard/temp"))); 
+// 保存路径intent.putExtra("outputFormat", "JPEG");
+// 返回格式startActivityForResult(intent, 0);
 // 剪切特定图片
-Intent intent = new Intent("com.android.camera.action.CROP");
-intent.setClassName("com.android.camera", "com.android.camera.CropImage");
+Intent intent = new Intent("com.android.camera.action.CROP");i
+ntent.setClassName("com.android.camera", "com.android.camera.CropImage");
 intent.setData(Uri.fromFile(new File("/mnt/sdcard/temp")));
-intent.putExtra("outputX", 1); // 剪切的宽高比为1：2
+intent.putExtra("outputX", 1); 
+// 剪切的宽高比为1：2
 intent.putExtra("outputY", 2);
-intent.putExtra("aspectX", 20); // 保存图片的宽和高
+intent.putExtra("aspectX", 20); 
+// 保存图片的宽和高
 intent.putExtra("aspectY", 40);
 intent.putExtra("scale", true);
 intent.putExtra("noFaceDetection", true);
@@ -548,7 +536,7 @@ startActivityForResult(intent, 0);
 
 - 打开手机应用市场
 
-```dart
+```java
 // 打开手机应用市场，直接进入该程序的详细页面
 Uri uri = Uri.parse("market://details?id=" + packageName);
 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
@@ -557,25 +545,24 @@ startActivity(intent);
 
 - 安装程序
 
-```dart
-String fileName = Environment.getExternalStorageDirectory() + "/myApp.apk";   
-Intent intent = new Intent(Intent.ACTION_VIEW);   
-intent.setDataAndType(Uri.fromFile(new File(fileName)),
-"application/vnd.android.package-archive");   
-startActivity(intent);  
+```java
+String fileName = Environment.getExternalStorageDirectory() + "/myApp.apk";
+Intent intent = new Intent(Intent.ACTION_VIEW);
+intent.setDataAndType(Uri.fromFile(new File(fileName)),"application/vnd.android.package-archive");
+startActivity(intent);
 ```
 
 - 卸载程序
 
-```dart
-Uri uri = Uri.parse("package:" + packageName);   
+```java
+Uri uri = Uri.parse("package:" + packageName);
 Intent intent = new Intent(Intent.ACTION_DELETE, uri);
 startActivity(intent);
 ```
 
 - 进入设置界面
 
-```cpp
+```java
 // 进入系统设置界面
 Intent intent = new Intent(android.provider.Settings.ACTION_SETTINGS);
 startActivity(intent);
@@ -601,28 +588,30 @@ Toast是Android中用来显示显示信息的一种机制，和Dialog不一样�
 
 3.若用户名不是admin，密码不是123，提示密码错误
 
-```
-login.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                String username1 = username.getText().toString();//从输入框获得数据
-                String password1 = pwd.getText().toString();
-                if(username1.equals("admin")){
-                    if(password1.equals("123")){
-                        Toast.makeText(LoginActivity.this,"登录成功", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent();
-                        intent.setClass(LoginActivity.this,MainActivity.class);//第一个是当前Activity，第二个是要跳转的Activity
-                        startActivity(intent);
-                        LoginActivity.this.finish();
-                    }else{
-                        Toast.makeText(LoginActivity.this,"密码错误", Toast.LENGTH_SHORT).show();
-                    }
-
-                }else{
-                    Toast.makeText(LoginActivity.this,"用户名错误", Toast.LENGTH_SHORT).show();
-                }
-
+```java
+login.setOnClickListener(new View.OnClickListener(){            
+    @Override            
+    public void onClick(View v) {                
+        String username1 = username.getText().toString();//从输入框获得数据            
+        String password1 = pwd.getText().toString();    
+        if(username1.equals("admin")){                    
+            if(password1.equals("123")){                        	
+                Toast.makeText(LoginActivity.this,"登录成功",Toast.LENGTH_SHORT)
+                    .show();  
+                Intent intent = new Intent();                        
+                intent.setClass(LoginActivity.this,MainActivity.class);
+                //第一个是当前Activity，
+                //第二个是要跳转的Activity ,startActivity(intent);                       
+                LoginActivity.this.finish();                    
             }
-        });
+			else{                        
+    Toast.makeText(LoginActivity.this,"密码错误", Toast.LENGTH_SHORT).show();                 
+			}                
+        }
+       else
+        {                    
+            Toast.makeText(LoginActivity.this,"用户名错误", Toast.LENGTH_SHORT).show();               
+        }            
+    }       
+});
 ```
-
