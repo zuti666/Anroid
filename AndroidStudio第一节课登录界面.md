@@ -167,7 +167,7 @@ Button是一种比较常用的控件爱你，最常用的就是其监听事件
 
 #### TextView属性
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/vkC2hqLZ6XFq7vQUPQVactWrWHCS3GMoqq7TXQ7Xn5ncWWtmPqolb0XuzYU5Xj6fibxCDfrfuicQsO5pXCDh9shQ/640?wx_fmt=png)
+<img src="https://mmbiz.qpic.cn/mmbiz_png/vkC2hqLZ6XFq7vQUPQVactWrWHCS3GMoqq7TXQ7Xn5ncWWtmPqolb0XuzYU5Xj6fibxCDfrfuicQsO5pXCDh9shQ/640?wx_fmt=png" alt="img" style="zoom:200%;" />
 
 TextView标签中“android:”后面的单词表示属性名，“=” 后面用引号包裹的部分表示属性值，通过这种“键 - 值”对的关系设定控件的一个个属性。这里为TextView添加的属性有：
 
